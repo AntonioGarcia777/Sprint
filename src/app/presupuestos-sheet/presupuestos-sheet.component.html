@@ -1,0 +1,18 @@
+<div class="container">
+    <h4>
+        <div>
+            ¿Qué quieres hacer?
+        </div>
+        <br />
+        <form [formGroup]="form">
+            <div class="service-list" *ngFor="let servicio of servicios; let i=index">
+                <mat-checkbox color="primary"  formArrayName="selectedServices" 
+                    (change)="onCheckboxChange(servicio.value, $event)">
+                    {{ servicio.name }}
+                </mat-checkbox>               
+            </div>            
+                <app-panel *ngIf="openPanel"></app-panel>                     
+        </form>
+    </h4>     
+    <h4><p #asPrecio id="precio">Precio: {{ total + priceOfPage + priceOfLanguage }} €</p></h4>    
+</div>

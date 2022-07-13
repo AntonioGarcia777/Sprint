@@ -1,0 +1,25 @@
+.form-control{
+    border: solid 2px;    
+}
+
+div{
+    margin-top: 10px;
+}
+
+button{
+    color:aliceblue;
+    background-color:orangered;
+    border-color: orangered;
+    border-radius: 0.4rem;
+}
+
+.minus {width: 121%;}
+
+input{
+    font-size:x-large;
+    font-weight: bold;
+}
+
+
+
+

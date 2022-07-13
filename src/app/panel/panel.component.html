@@ -1,0 +1,35 @@
+<div class="row g-5 align-items-center">
+    <div class="col-auto">
+        <label>Número de páginas</label> 
+    </div>
+    <div class="col-auto">
+        <button mat-raised-button color="primary" (click)="addPage()"><h3>+</h3></button>
+    </div>    
+    <div class="col-auto">             
+        <input type="number" #pageQty [(ngModel)]="pageCount" name="pageCount" class="form-control" min="0" max="1000" [value]="pageQty.name"
+        (input)="pageQty.name=getValueOfPages($event)">
+    </div>    
+    <div class="col-auto"> 
+        <button mat-raised-button color="primary" (click)="restPage()" class="minus"><h3><strong>-</strong></h3></button> 
+    </div>   
+    <div class="col-auto">        
+    </div>
+</div>
+<div class="row g-5 align-items-center">
+    <div class="col-auto">
+        <label>Número de idiomas</label> 
+    </div>
+    <div class="col-auto">
+        <button mat-raised-button color="primary" (click)="addLanguage()"><h3>+</h3></button>
+    </div>
+    <div class="col-auto">
+        <input type="number" #languageQty [(ngModel)]="languageCount" name="languageCount" class="form-control" min="0" max="1000" [value]="languageQty.name"
+        (input)="languageQty.name=getValueOfLanguages($event)">
+    </div>    
+    <div class="col-auto"> 
+        <button mat-raised-button color="primary" (click)="restLanguage()" class="minus"><h3><strong>-</strong></h3></button> 
+    </div>
+    <div class="col-auto">        
+    </div>       
+</div>
+<br/>

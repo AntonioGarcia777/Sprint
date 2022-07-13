@@ -59,7 +59,12 @@ export class PresupuestosSheetComponent implements OnInit {
       const index = selectedServices.controls
       .findIndex(control => control.value == 500);
       this.openPanel = true;
-    } else this.openPanel = false
+    }
+     else if (event.checked) {
+      const index = selectedServices.controls
+      .findIndex(control => control.value == 300);
+      this.openPanel = false;
+    }
     console.log(this.form.value);      
   }  
 
